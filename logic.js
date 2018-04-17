@@ -1,40 +1,36 @@
-
-// This array will hold the options for the game
-// Fill in your options below
-const options = [/*option 1*/, /*option 2*/, /*option 3*/];
-
+const options = ['Rock', 'Scissors', 'Paper'];
 // This function takes in the userChoice and then prints the results to the console.
 function playGame(userChoice) {
-
-    // First remind the user of his/her choice
-    console.log(/*Put text here*/);
-
-    // Now choose a random number between 0 and 2
-    const rand = /*Fill in the code for a random value between 0 and 2*/;
-
-    // Then use this random number to give the computer a choice
-    const compChoice = options[rand];
-
-    // Now log the computer's choice to the console.
-    console.log(/*Put text here*/);
-
-    // Now determine the winner using if/else statements
-    /*
-    |
-    |
-    This will take several if/else statements, so it will take multiple lines.
-    |
-    |
-    */
-
+    console.log('You chose ' + userChoice + '.');
+if(userChoice == 'Rock'){
+    var a = 2;
 }
-
-
-
-
-
-
-
+if(userChoice == 'Scissors'){
+    var a = 1;
+}
+if(userChoice == 'Paper'){
+    var a = 0;
+}
+var b = (Math.floor(Math.random() * 3));
+if (b == 2){
+    var c = 'Rock';
+}
+if (b == 1){
+    var c = 'Scissors';
+}
+if (b == 0){
+    var c = 'Paper';
+}
+console.log('The computer chose' + c);
+if(a == b){
+    document.write('You tied.')
+}
+else if(a == b + 1 || Math.abs(a - b - 1) == 3){
+    document.write(userChoice + 'beats' + c + '. You win');
+}
+else{
+    document.write(c + 'beats' + userChoice + '. You lose.');
+}
 
 
 
